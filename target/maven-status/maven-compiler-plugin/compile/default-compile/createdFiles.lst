@@ -1,0 +1,8 @@
+pages\BasePage.class
+pages\ConfirmationPage.class
+pages\PaymentPage.class
+pages\PersonalinformationPage.class
+pages\ProductPage.class
+pages\LoginPage.class
+pages\CheckoutPage.class
+utils\DataUtils.class
