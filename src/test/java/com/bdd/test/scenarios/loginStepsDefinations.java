@@ -40,7 +40,6 @@ public class loginStepsDefinations extends BaseTest {
 
 	@Given("The user is on login page and then fills login form with folowing information")
 	public void login(DataTable dt) {
-
 		List<Map<String, String>> loginIformation = dt.asMaps(String.class, String.class);
 		loginPage.loginToApplication(loginIformation.get(0).get("username"), loginIformation.get(0).get("password"));
 	}
@@ -52,7 +51,9 @@ public class loginStepsDefinations extends BaseTest {
 
 	@Then("Login should be successful and user is on profile page")
 	public void verifyLogin() {
+
 		Assert.assertEquals(loginPage.getCurrentUrl(), DataUtils.getTestData("Config", "LoginUrl"));
+
 	}
 
 // checkout definitions
