@@ -15,6 +15,7 @@ public class CheckoutPage extends BasePage {
 
 	public void clickCheckOut() {
 		clickElement(checkOutbtn);
+
 	}
 
 }

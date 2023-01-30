@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ConfirmationPage extends BasePage {
 
-	By corfirmMsg = By.xpath("//h2[text()='THANK YOU FOR YOUR ORDER']");
+	String corfirmMsg = "//h2[text()='THANK YOU FOR YOUR ORDER']";
 
 	public ConfirmationPage(ThreadLocal<WebDriver> driver) {
 		super(driver);
@@ -14,8 +14,9 @@ public class ConfirmationPage extends BasePage {
 
 	}
 
-	public boolean validatesuccessMesg() {
-		return isElementPresent(corfirmMsg);
+	public boolean validatesuccessMesg(String expectedMessage) {
+		By messageFullXpath = By.xpath(String.format(corfirmMsg, expectedMessage));
+		return isElementPresent(messageFullXpath);
 	}
 
 }

@@ -21,13 +21,11 @@
 Feature: Login Module
 
 @smoke @login  @positive @critical
-Scenario: Verify that login functionality
- Given The user is on login page
- When The user fills login form with folowing information
+Scenario: Verify login functionality
+Given The user is on login page and then fills login form with folowing information
 |username|password|
 |standard_user|secret_sauce|
-
-And Clicks on login button
+When The user clicks on login button
 Then Login should be successful and user is on profile page 
  
 

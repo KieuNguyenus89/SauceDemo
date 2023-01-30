@@ -5,10 +5,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 public class PaymentPage extends BasePage {
-	By itemName = By.xpath("//div[@class='inventory_item_name']");
-	By itemPrice = By.xpath("//div[@class='inventory_item_price']");
-	By Tax = By.xpath("//div[@class='summary_tax_label']");
-	By totalPrice = By.xpath("//div[@class='summary_total_label']");
+	String itemName = "//div[@class='inventory_item_name']";
+	String itemPrice = "//div[@class='inventory_item_price']";
+	String Tax = "//div[@class='summary_tax_label']";
+	String totalAmount = "//div[@class='summary_total_label']";
 	By finishBtn = By.xpath("//button[@id='finish']");
 
 	public PaymentPage(ThreadLocal<WebDriver> driver) {
@@ -17,23 +17,27 @@ public class PaymentPage extends BasePage {
 
 	}
 
-	public String getItemName() {
-		return getText(itemName);
+	public boolean verifyItemNameIsCorrect(String expectedItemName) {
+		By itemNameFullXpath = By.xpath(String.format(itemName, expectedItemName));
+		return isElementPresent(itemNameFullXpath);
 	}
 
-	public String getItemprice() {
-		return getText(itemPrice);
+	public boolean verifyItemPriceIsCorrect(String expectedItemPrice) {
+		By itemPriceFullXpath = By.xpath(String.format(itemPrice, expectedItemPrice));
+		return isElementPresent(itemPriceFullXpath);
 	}
 
-	public String getItemTax() {
-		return getText(Tax);
+	public boolean verifyTaxIsCorrect(String expectedTax) {
+		By itemNameFullXpath = By.xpath(String.format(Tax, expectedTax));
+		return isElementPresent(itemNameFullXpath);
 	}
 
-	public String getItemTotalAmount() {
-		return getText(totalPrice);
+	public boolean verifyTotalAmountIsCorrect(String expectedTotalAmount) {
+		By itemNameFullXpath = By.xpath(String.format(totalAmount, expectedTotalAmount));
+		return isElementPresent(itemNameFullXpath);
 	}
 
-	public void clickFinish() {
+	public void clickFinishButton() {
 		clickElement(finishBtn);
 	}
 

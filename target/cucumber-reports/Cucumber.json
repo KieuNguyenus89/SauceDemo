@@ -3,29 +3,86 @@
     "line": 20,
     "elements": [
       {
-        "start_timestamp": "2023-01-29T03:49:26.416Z",
+        "line": 21,
+        "name": "Login and go to product page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 170425401,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "The user is on login page and then fills login form with folowing information",
+            "match": {
+              "location": "loginStepsDefinations.login(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "username",
+                  "password"
+                ]
+              },
+              {
+                "cells": [
+                  "standard_user",
+                  "secret_sauce"
+                ]
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 111040000,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "The user clicks on login button",
+            "match": {
+              "location": "loginStepsDefinations.clickLoginBtn()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 157412599,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "Login should be successful and user is on profile page",
+            "match": {
+              "location": "loginStepsDefinations.verifyLogin()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-01-30T00:54:26.659Z",
         "before": [
           {
             "result": {
-              "error_message": "java.lang.NullPointerException: Cannot invoke \"org.openqa.selenium.WebDriver.manage()\" because the return value of \"java.lang.ThreadLocal.get()\" is null\r\n\tat testcases.BaseTest.setUp(BaseTest.java:34)\r\n\tat com.bdd.test.scenarios.loginStepsDefinations.setUpDriverAndPageObjects(loginStepsDefinations.java:28)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\r\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:65)\r\n\tat cucumber.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:16)\r\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:65)\r\n\tat cucumber.runner.TestStep.run(TestStep.java:50)\r\n\tat cucumber.runner.TestCase.run(TestCase.java:42)\r\n\tat cucumber.runner.Runner.runPickle(Runner.java:50)\r\n\tat io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:79)\r\n\tat io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:24)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\r\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)\r\n\tat org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)\r\n\tat org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)\r\n\tat org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:77)\r\n\tat org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:15)\r\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\r\n\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)\r\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\r\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)\r\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)\r\n\tat java.base/java.lang.Thread.run(Thread.java:833)\r\n",
-              "duration": 241634200,
-              "status": "failed"
+              "duration": 2347658600,
+              "status": "passed"
             },
             "match": {
               "location": "loginStepsDefinations.setUpDriverAndPageObjects(Scenario)"
             }
           }
         ],
-        "line": 23,
+        "line": 29,
         "name": "Verify that Checkout is working with correct credentials",
         "description": "",
         "id": "checkout-module;verify-that-checkout-is-working-with-correct-credentials",
         "after": [
           {
             "result": {
-              "error_message": "java.lang.NullPointerException: Cannot invoke \"org.openqa.selenium.WebDriver.quit()\" because the return value of \"java.lang.ThreadLocal.get()\" is null\r\n\tat testcases.BaseTest.cleanUpActivities(BaseTest.java:53)\r\n\tat com.bdd.test.scenarios.loginStepsDefinations.performCleanUp(loginStepsDefinations.java:34)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\r\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:65)\r\n\tat cucumber.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:16)\r\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:65)\r\n\tat cucumber.runner.TestStep.run(TestStep.java:50)\r\n\tat cucumber.runner.TestCase.run(TestCase.java:50)\r\n\tat cucumber.runner.Runner.runPickle(Runner.java:50)\r\n\tat io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:79)\r\n\tat io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:24)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\r\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)\r\n\tat org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)\r\n\tat org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)\r\n\tat org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:77)\r\n\tat org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:15)\r\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\r\n\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)\r\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\r\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)\r\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)\r\n\tat java.base/java.lang.Thread.run(Thread.java:833)\r\n",
-              "duration": 41600,
-              "status": "failed"
+              "duration": 177309301,
+              "status": "passed"
             },
             "match": {
               "location": "loginStepsDefinations.performCleanUp(Scenario)"
@@ -37,59 +94,50 @@
         "steps": [
           {
             "result": {
-              "duration": 6300,
-              "status": "skipped"
+              "duration": 59276600,
+              "status": "passed"
             },
-            "line": 25,
-            "name": "The user is on login page",
+            "line": 30,
+            "name": "The user click on add to cart button of first item",
             "match": {
-              "location": "loginStepsDefinations.login(DataTable)"
+              "location": "loginStepsDefinations.clickAddToCartFirstItem()"
             },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 26,
-            "name": "The user enter the \"\u003cusername\u003e\" in username field and \"\u003cpassword\u003e\" in password field and clicks login button",
-            "match": {},
             "keyword": "When "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 61942901,
+              "status": "passed"
             },
-            "line": 27,
-            "name": "Click on add to cart button of first item",
-            "match": {},
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 28,
+            "line": 31,
             "name": "Click on view cart items",
-            "match": {},
+            "match": {
+              "location": "loginStepsDefinations.clickViewCartItem()"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 50285999,
+              "status": "passed"
             },
-            "line": 29,
+            "line": 32,
             "name": "Click on checkout button",
-            "match": {},
+            "match": {
+              "location": "loginStepsDefinations.clickCheckOutBtn()"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 139087000,
+              "status": "passed"
             },
-            "line": 30,
+            "line": 33,
             "name": "The user fills personal information form with following information",
-            "match": {},
+            "match": {
+              "location": "loginStepsDefinations.fillPersonalInfoForm(DataTable)"
+            },
             "rows": [
               {
                 "cells": [
@@ -110,20 +158,26 @@
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 2040326900,
+              "status": "passed"
             },
-            "line": 33,
-            "name": "clicks continue button",
-            "match": {},
+            "line": 36,
+            "name": "Clicks continue button",
+            "match": {
+              "location": "loginStepsDefinations.clickContinueBtn()"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 99428699,
+              "status": "passed"
             },
-            "line": 34,
+            "line": 37,
             "name": "The user should direct to the checkout overview page and should see following information",
-            "match": {},
+            "match": {
+              "location": "loginStepsDefinations.VerifyItemInformation(DataTable)"
+            },
             "rows": [
               {
                 "cells": [
@@ -146,20 +200,39 @@
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 38221301,
+              "status": "passed"
             },
-            "line": 37,
+            "line": 40,
             "name": "The user click on  finish button",
-            "match": {},
+            "match": {
+              "location": "loginStepsDefinations.clickFinishBtn()"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "undefined"
+              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//div[@class\u003d\u0027summary_total_label\u0027]\"}\n  (Session info: chrome\u003d109.0.5414.120)\nFor documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element\nBuild info: version: \u00274.6.0\u0027, revision: \u002779f1c02ae20\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002717.0.4.1\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [9987ce9ebf66d85e5da5c1c2b0bfce7d, findElement {using\u003dxpath, value\u003d//div[@class\u003d\u0027summary_total_label\u0027]}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\\Users\\DINHLE~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:61650}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61650/devtoo..., se:cdpVersion: 109.0.5414.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 9987ce9ebf66d85e5da5c1c2b0bfce7d\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)\r\n\tat org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)\r\n\tat org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)\r\n\tat pages.BasePage.isElementPresent(BasePage.java:33)\r\n\tat pages.PaymentPage.verifyTotalAmountIsCorrect(PaymentPage.java:39)\r\n\tat com.bdd.test.scenarios.loginStepsDefinations.verifySuccessMessage(loginStepsDefinations.java:112)\r\n\tat ✽.The user should direct to confirmation page and should see the message following(file:src/test/java/FeatureFiles/checkout.feature:41)\r\n",
+              "duration": 20022153000,
+              "status": "failed"
             },
-            "line": 38,
-            "name": "The user should direct to confirmation page and should see the message \"MESSAGE: THANK YOU FOR YOUR ORDER\"",
-            "match": {},
+            "line": 41,
+            "name": "The user should direct to confirmation page and should see the message following",
+            "match": {
+              "location": "loginStepsDefinations.verifySuccessMessage(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Message"
+                ]
+              },
+              {
+                "cells": [
+                  "THANK YOU FOR YOUR ORDER"
+                ]
+              }
+            ],
             "keyword": "Then "
           }
         ],
@@ -168,7 +241,7 @@
             "name": "@smoke"
           },
           {
-            "name": "@login"
+            "name": "@checkout"
           },
           {
             "name": "@positive"
@@ -190,13 +263,12 @@
     "line": 21,
     "elements": [
       {
-        "start_timestamp": "2023-01-29T03:49:26.399Z",
+        "start_timestamp": "2023-01-30T00:54:26.659Z",
         "before": [
           {
             "result": {
-              "error_message": "java.lang.NullPointerException: Cannot invoke \"org.openqa.selenium.WebDriver.manage()\" because the return value of \"java.lang.ThreadLocal.get()\" is null\r\n\tat testcases.BaseTest.setUp(BaseTest.java:34)\r\n\tat com.bdd.test.scenarios.loginStepsDefinations.setUpDriverAndPageObjects(loginStepsDefinations.java:28)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\r\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:65)\r\n\tat cucumber.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:16)\r\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:65)\r\n\tat cucumber.runner.TestStep.run(TestStep.java:50)\r\n\tat cucumber.runner.TestCase.run(TestCase.java:42)\r\n\tat cucumber.runner.Runner.runPickle(Runner.java:50)\r\n\tat io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:79)\r\n\tat io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:24)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\r\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)\r\n\tat org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)\r\n\tat org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)\r\n\tat org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:77)\r\n\tat org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:15)\r\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\r\n\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)\r\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\r\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)\r\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)\r\n\tat java.base/java.lang.Thread.run(Thread.java:833)\r\n",
-              "duration": 258247600,
-              "status": "failed"
+              "duration": 2426489300,
+              "status": "passed"
             },
             "match": {
               "location": "loginStepsDefinations.setUpDriverAndPageObjects(Scenario)"
@@ -204,15 +276,14 @@
           }
         ],
         "line": 24,
-        "name": "Verify that login functionality",
+        "name": "Verify login functionality",
         "description": "",
-        "id": "login-module;verify-that-login-functionality",
+        "id": "login-module;verify-login-functionality",
         "after": [
           {
             "result": {
-              "error_message": "java.lang.NullPointerException: Cannot invoke \"org.openqa.selenium.WebDriver.quit()\" because the return value of \"java.lang.ThreadLocal.get()\" is null\r\n\tat testcases.BaseTest.cleanUpActivities(BaseTest.java:53)\r\n\tat com.bdd.test.scenarios.loginStepsDefinations.performCleanUp(loginStepsDefinations.java:34)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\r\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:65)\r\n\tat cucumber.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:16)\r\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:65)\r\n\tat cucumber.runner.TestStep.run(TestStep.java:50)\r\n\tat cucumber.runner.TestCase.run(TestCase.java:50)\r\n\tat cucumber.runner.Runner.runPickle(Runner.java:50)\r\n\tat io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:79)\r\n\tat io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:24)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\r\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)\r\n\tat org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)\r\n\tat org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)\r\n\tat org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:77)\r\n\tat org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:15)\r\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\r\n\tat java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)\r\n\tat java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)\r\n\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)\r\n\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)\r\n\tat java.base/java.lang.Thread.run(Thread.java:833)\r\n",
-              "duration": 46900,
-              "status": "failed"
+              "duration": 148030099,
+              "status": "passed"
             },
             "match": {
               "location": "loginStepsDefinations.performCleanUp(Scenario)"
@@ -224,23 +295,11 @@
         "steps": [
           {
             "result": {
-              "duration": 5100,
-              "status": "skipped"
+              "duration": 161772100,
+              "status": "passed"
             },
             "line": 25,
-            "name": "The user is on login page",
-            "match": {
-              "location": "loginStepsDefinations.login(DataTable)"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 2300,
-              "status": "skipped"
-            },
-            "line": 26,
-            "name": "The user fills login form with folowing information",
+            "name": "The user is on login page and then fills login form with folowing information",
             "match": {
               "location": "loginStepsDefinations.login(DataTable)"
             },
@@ -258,26 +317,26 @@
                 ]
               }
             ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 221964501,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "The user clicks on login button",
+            "match": {
+              "location": "loginStepsDefinations.clickLoginBtn()"
+            },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 1300,
-              "status": "skipped"
+              "duration": 24915900,
+              "status": "passed"
             },
-            "line": 30,
-            "name": "Clicks on login button",
-            "match": {
-              "location": "loginStepsDefinations.clickLoginBtn()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 2900,
-              "status": "skipped"
-            },
-            "line": 31,
+            "line": 29,
             "name": "Login should be successful and user is on profile page",
             "match": {
               "location": "loginStepsDefinations.verifyLogin()"

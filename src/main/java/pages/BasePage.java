@@ -63,4 +63,11 @@ public class BasePage {
 
 	}
 
+//	public String verifyElementExist(By element) {
+//		WebDriverWait wait = new WebDriverWait((WebDriver) driver2, Duration.ofSeconds(10));
+//		wait.until(ExpectedConditions.presenceOfElementLocated(element));
+//		// wait.until(ExpectedConditions.visibilityOfElementLocated(element));
+//		return getText(element);
+
+	// }
 }
