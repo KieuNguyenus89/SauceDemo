@@ -108,7 +108,7 @@ public class loginStepsDefinations extends BaseTest {
 	@Then("The user should direct to confirmation page and should see the message following")
 	public void verifySuccessMessage(DataTable data) {
 		List<Map<String, String>> message = data.asMaps(String.class, String.class);
-		Assert.assertEquals(paymentPage.verifyTotalAmountIsCorrect(message.get(0).get(Message)), true);
+		Assert.assertEquals(confirmationPage.validatesuccessMesg(message.get(0).get(Message)), true);
 	}
 
 }
